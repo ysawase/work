@@ -11155,3 +11155,34 @@ body:not(.portfolio-admin-page) .header-tel-hours{
   }
 }
 /* === /NIKONIKO SP BOX OVERFLOW REPAIR 2026-05-11 === */
+
+
+/* =========================================================
+   NIKONIKO MAP FALLBACK / PORTFOLIO NOTE GUARD 2026-05-11
+   対象：ニコニコはうす本体のみ。
+========================================================= */
+
+body:not(.portfolio-admin-page) .practical-env-block{
+  display:none !important;
+}
+
+.access-map-fallback{
+  margin:10px 0 0 !important;
+  font-size:13px !important;
+  line-height:1.7 !important;
+  text-align:right !important;
+}
+
+.access-map-fallback a{
+  color:#36564c !important;
+  text-decoration:underline !important;
+  text-underline-offset:3px !important;
+}
+
+@media(max-width:760px){
+  .access-map-fallback{
+    text-align:left !important;
+    font-size:13px !important;
+  }
+}
+/* === /NIKONIKO MAP FALLBACK / PORTFOLIO NOTE GUARD 2026-05-11 === */
