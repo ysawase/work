@@ -10672,3 +10672,382 @@ body:not(.portfolio-admin-page) h4{
   transform:translateY(-1px);
 }
 /* === /PORTFOLIO NOTE EMPHASIS 2026-05-11 === */
+
+
+/* =========================================================
+   NIKONIKO SP CONTACT / MAP REPAIR 2026-05-11
+   対象：ニコニコはうす本体のみ。
+   目的：
+   - SPで英字ラベル（Consultation等）が縦割れするのを防ぐ
+   - お問い合わせページの写真が縦長に崩れるのを防ぐ
+   - GoogleMap iframeがSPで横幅・高さ崩れするのを防ぐ
+   変更しない：ポートフォリオページ、PCレイアウト、主要構成。
+========================================================= */
+
+/* 英字ラベルの縦割れ・1文字折り返し防止 */
+.nikoniko-page .eyebrow,
+.nikoniko-page .sub-label,
+.nikoniko-page .section-en,
+body:not(.portfolio-admin-page) .eyebrow,
+body:not(.portfolio-admin-page) .sub-label,
+body:not(.portfolio-admin-page) .section-en{
+  writing-mode:horizontal-tb !important;
+  white-space:nowrap !important;
+  word-break:normal !important;
+  overflow-wrap:normal !important;
+  text-wrap:nowrap !important;
+  max-width:100% !important;
+}
+
+/* SPで長い見出し・本文が極端に細く折れないようにする */
+@media(max-width:760px){
+  body:not(.portfolio-admin-page) .section-title,
+  body:not(.portfolio-admin-page) .section-lead,
+  body:not(.portfolio-admin-page) .section-text,
+  body:not(.portfolio-admin-page) .sub-hero h1,
+  body:not(.portfolio-admin-page) .sub-hero p{
+    max-width:100% !important;
+    word-break:normal !important;
+    overflow-wrap:break-word !important;
+  }
+
+  /* お問い合わせページ：Consultation周辺を1カラムで自然に並べる */
+  body:not(.portfolio-admin-page) .contact-page-layout{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:18px !important;
+    align-items:start !important;
+  }
+
+  body:not(.portfolio-admin-page) .contact-page-layout > *{
+    min-width:0 !important;
+  }
+
+  /* お問い合わせページ：右側写真がSPで縦長に見えすぎるのを防ぐ */
+  body:not(.portfolio-admin-page) .contact-page-layout > figure.photo-soft{
+    width:100% !important;
+    max-width:100% !important;
+    margin:10px 0 0 !important;
+  }
+
+  body:not(.portfolio-admin-page) .contact-page-layout > figure.photo-soft img{
+    width:100% !important;
+    height:auto !important;
+    max-height:220px !important;
+    aspect-ratio:16 / 9 !important;
+    object-fit:cover !important;
+    object-position:center center !important;
+  }
+
+  body:not(.portfolio-admin-page) .contact-box,
+  body:not(.portfolio-admin-page) .contact-box.wide{
+    max-width:100% !important;
+    width:100% !important;
+    box-sizing:border-box !important;
+  }
+
+  body:not(.portfolio-admin-page) .contact-inline-form-link,
+  body:not(.portfolio-admin-page) .contact-form-jump{
+    max-width:100% !important;
+    box-sizing:border-box !important;
+    white-space:normal !important;
+    text-align:center !important;
+  }
+
+  /* 会社ページ GoogleMap：SPで横幅・高さが崩れないように固定 */
+  body:not(.portfolio-admin-page) .access-card{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:16px !important;
+    overflow:hidden !important;
+  }
+
+  body:not(.portfolio-admin-page) .access-map{
+    width:100% !important;
+    max-width:100% !important;
+    overflow:hidden !important;
+    border-radius:14px !important;
+    aspect-ratio:4 / 3 !important;
+    min-height:220px !important;
+    background:#eee !important;
+  }
+
+  body:not(.portfolio-admin-page) .access-map iframe{
+    display:block !important;
+    width:100% !important;
+    max-width:100% !important;
+    height:100% !important;
+    min-height:220px !important;
+    border:0 !important;
+  }
+}
+
+@media(max-width:420px){
+  body:not(.portfolio-admin-page) .access-map{
+    aspect-ratio:1 / 1 !important;
+    min-height:210px !important;
+  }
+
+  body:not(.portfolio-admin-page) .access-map iframe{
+    min-height:210px !important;
+  }
+
+  body:not(.portfolio-admin-page) .contact-page-layout > figure.photo-soft img{
+    max-height:190px !important;
+  }
+}
+/* === /NIKONIKO SP CONTACT / MAP REPAIR 2026-05-11 === */
+
+
+/* =========================================================
+   NIKONIKO SP MAP TEXT / FOOTER REPAIR 2026-05-11
+   対象：ニコニコはうす本体のSP表示のみ。
+   目的：
+   - アクセス欄の地図上テキストがSPで崩れるのを防ぐ
+   - SPフッターを読みやすい縦積み配置へ整理
+   変更しない：PC表示、ポートフォリオページ、フッター文言。
+========================================================= */
+
+@media(max-width:760px){
+  /* アクセス欄：テキストと地図を確実に縦積みにし、文字が細く折れないようにする */
+  body:not(.portfolio-admin-page) .access-card{
+    grid-template-columns:1fr !important;
+    padding:18px !important;
+    gap:16px !important;
+    align-items:start !important;
+  }
+
+  body:not(.portfolio-admin-page) .access-text{
+    width:100% !important;
+    min-width:0 !important;
+    justify-content:flex-start !important;
+  }
+
+  body:not(.portfolio-admin-page) .access-lead{
+    font-size:14.5px !important;
+    line-height:1.85 !important;
+    letter-spacing:0 !important;
+    word-break:normal !important;
+    overflow-wrap:break-word !important;
+    text-wrap:auto !important;
+    max-width:100% !important;
+  }
+
+  body:not(.portfolio-admin-page) .access-note{
+    font-size:12px !important;
+    line-height:1.75 !important;
+    word-break:normal !important;
+    overflow-wrap:break-word !important;
+    max-width:100% !important;
+  }
+
+  body:not(.portfolio-admin-page) .access-lead br{
+    display:none !important;
+  }
+
+  /* SPフッター：写真背景や白BOXの重なりを弱め、情報を縦に読みやすく整理 */
+  body:not(.portfolio-admin-page) .site-footer{
+    padding:26px 0 92px !important;
+    background:#ece6dc !important;
+    overflow:hidden !important;
+  }
+
+  body:not(.portfolio-admin-page) .site-footer::before{
+    width:100% !important;
+    height:118px !important;
+    top:0 !important;
+    bottom:auto !important;
+    left:0 !important;
+    opacity:.36 !important;
+    background:
+      linear-gradient(180deg,rgba(236,230,220,.24),rgba(236,230,220,.92)),
+      url('../img/night_footer_02.jpg') center/cover no-repeat !important;
+  }
+
+  body:not(.portfolio-admin-page) .footer-main{
+    position:relative !important;
+    z-index:1 !important;
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:18px !important;
+    padding-top:92px !important;
+    padding-bottom:18px !important;
+  }
+
+  body:not(.portfolio-admin-page) .footer-about{
+    margin:0 !important;
+    transform:none !important;
+    padding:18px 18px !important;
+    border-radius:14px !important;
+    background:rgba(255,253,249,.86) !important;
+    box-shadow:0 8px 22px rgba(47,58,54,.08) !important;
+  }
+
+  body:not(.portfolio-admin-page) .footer-links,
+  body:not(.portfolio-admin-page) .footer-info{
+    width:100% !important;
+    padding:0 !important;
+    margin:0 !important;
+    background:transparent !important;
+    box-shadow:none !important;
+    border:0 !important;
+  }
+
+  body:not(.portfolio-admin-page) .footer-links{
+    display:grid !important;
+    grid-template-columns:1fr 1fr !important;
+    gap:8px 14px !important;
+  }
+
+  body:not(.portfolio-admin-page) .footer-links a{
+    display:block !important;
+    padding:7px 0 !important;
+    line-height:1.5 !important;
+  }
+
+  body:not(.portfolio-admin-page) .footer-info p,
+  body:not(.portfolio-admin-page) .footer-about p{
+    line-height:1.75 !important;
+    margin-bottom:8px !important;
+  }
+
+  body:not(.portfolio-admin-page) .footer-bottom{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:6px !important;
+    margin-top:14px !important;
+    padding-top:14px !important;
+  }
+}
+
+@media(max-width:420px){
+  body:not(.portfolio-admin-page) .access-card{
+    padding:16px !important;
+  }
+
+  body:not(.portfolio-admin-page) .access-lead{
+    font-size:14px !important;
+    line-height:1.8 !important;
+  }
+
+  body:not(.portfolio-admin-page) .footer-links{
+    grid-template-columns:1fr !important;
+    gap:2px !important;
+  }
+
+  body:not(.portfolio-admin-page) .site-footer{
+    padding-bottom:96px !important;
+  }
+}
+/* === /NIKONIKO SP MAP TEXT / FOOTER REPAIR 2026-05-11 === */
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   NIKONIKO HEADER TOPINFO 2026-05-11
+   対象：ニコニコはうす本体ヘッダーのみ。
+   目的：電話番号＋受付時間を、広告感ではなく補助情報として自然に見せる。
+========================================================= */
+
+body:not(.portfolio-admin-page) .header-topline{
+  display:block !important;
+}
+
+body:not(.portfolio-admin-page) .header-topline-inner{
+  min-height:34px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-end !important;
+  gap:18px !important;
+  color:#55615c !important;
+}
+
+body:not(.portfolio-admin-page) .header-access-mini{
+  font-size:12.5px !important;
+  line-height:1.4 !important;
+  white-space:nowrap !important;
+  color:#5e6b65 !important;
+}
+
+body:not(.portfolio-admin-page) .header-tel-mini{
+  display:inline-flex !important;
+  align-items:baseline !important;
+  gap:9px !important;
+  color:#36564c !important;
+  text-decoration:none !important;
+  white-space:nowrap !important;
+  line-height:1 !important;
+}
+
+body:not(.portfolio-admin-page) .header-tel-mini::before{
+  content:"☎";
+  font-size:12px !important;
+  color:#6b7f43 !important;
+  transform:translateY(-1px);
+}
+
+body:not(.portfolio-admin-page) .header-tel-number{
+  font-size:15px !important;
+  font-weight:700 !important;
+  letter-spacing:.03em !important;
+}
+
+body:not(.portfolio-admin-page) .header-tel-hours{
+  font-size:12px !important;
+  color:#5f6c67 !important;
+}
+
+@media(max-width:760px){
+  body:not(.portfolio-admin-page) .header-topline{
+    display:block !important;
+  }
+
+  body:not(.portfolio-admin-page) .header-topline-inner{
+    min-height:auto !important;
+    justify-content:center !important;
+    gap:8px !important;
+    flex-wrap:wrap !important;
+    padding:7px 0 6px !important;
+  }
+
+  body:not(.portfolio-admin-page) .header-access-mini{
+    width:100% !important;
+    text-align:center !important;
+    font-size:11.5px !important;
+  }
+
+  body:not(.portfolio-admin-page) .header-tel-mini{
+    justify-content:center !important;
+  }
+
+  body:not(.portfolio-admin-page) .header-tel-number{
+    font-size:14px !important;
+  }
+
+  body:not(.portfolio-admin-page) .header-tel-hours{
+    font-size:11.5px !important;
+  }
+}
+
+@media(max-width:420px){
+  body:not(.portfolio-admin-page) .header-access-mini{
+    font-size:11px !important;
+  }
+
+  body:not(.portfolio-admin-page) .header-tel-number{
+    font-size:13.5px !important;
+  }
+
+  body:not(.portfolio-admin-page) .header-tel-hours{
+    font-size:11px !important;
+  }
+}
+/* === /NIKONIKO HEADER TOPINFO 2026-05-11 === */
