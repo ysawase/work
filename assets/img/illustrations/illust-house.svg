@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" role="img" aria-label="illust-house.svg">
+  <rect width="160" height="120" fill="none"/>
+
+  <g class="partial-fill">
+    <path d="M36 70V45l44-30 44 30v25" fill="#6f9b63" opacity="0.95"/>
+    <path d="M72 102V78h17v24" fill="#6f9b63" opacity="0.95"/>
+  </g>
+  <g fill="none" stroke="#3f442d" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round">
+
+    <path d="M36 70V45l44-30 44 30v25"/>
+    <path d="M48 70v32h64V70"/>
+    <path d="M72 102V78h17v24"/>
+    <circle cx="63" cy="61" r="3"/>
+    <circle cx="96" cy="61" r="3"/>
+    <path d="M68 75c8 8 18 8 26 0"/>
+
+  </g>
+</svg>

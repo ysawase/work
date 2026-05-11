@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" role="img" aria-label="illust-trial.svg">
+  <rect width="160" height="120" fill="none"/>
+
+  <g class="partial-fill">
+    <path d="M48 84V53h64v31" fill="#6f9b63" opacity="0.95"/>
+    <path d="M56 53V41h48v12" fill="#6f9b63" opacity="0.95"/>
+  </g>
+  <g fill="none" stroke="#3f442d" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round">
+
+    <path d="M38 84h84"/>
+    <path d="M48 84V53h64v31"/>
+    <path d="M56 53V41h48v12"/>
+    <path d="M61 64h38"/>
+    <path d="M61 74h28"/>
+    <circle cx="38" cy="34" r="10"/>
+    <path d="M26 62c3-18 22-18 25 0"/>
+    <circle cx="122" cy="34" r="10"/>
+    <path d="M110 62c3-18 22-18 25 0"/>
+
+  </g>
+</svg>

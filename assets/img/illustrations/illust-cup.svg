@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" role="img" aria-label="illust-cup.svg">
+  <rect width="160" height="120" fill="none"/>
+
+  <g class="partial-fill">
+    <path d="M48 49h54v32c0 14-10 24-27 24s-27-10-27-24V49z" fill="#6f9b63" opacity="0.95"/>
+  </g>
+  <g fill="none" stroke="#3f442d" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round">
+
+    <path d="M48 49h54v32c0 14-10 24-27 24s-27-10-27-24V49z"/>
+    <path d="M102 58h10c10 0 14 8 10 17-4 9-12 12-20 10"/>
+    <path d="M42 105h70"/>
+    <path d="M62 32c-7-8 7-13 0-22"/>
+    <path d="M80 32c-7-8 7-13 0-22"/>
+
+  </g>
+</svg>

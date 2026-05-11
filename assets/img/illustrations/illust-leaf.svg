@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" role="img" aria-label="illust-leaf.svg">
+  <rect width="160" height="120" fill="none"/>
+
+  <g class="partial-fill">
+    <path d="M80 58c-24-2-39-15-45-37 22 3 38 15 45 37z" fill="#6f9b63" opacity="0.95"/>
+    <path d="M81 72c24-3 38-16 44-38-22 4-37 16-44 38z" fill="#6f9b63" opacity="0.95"/>
+  </g>
+  <g fill="none" stroke="#3f442d" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round">
+
+    <path d="M80 102C80 76 80 55 80 28"/>
+    <path d="M80 58c-24-2-39-15-45-37 22 3 38 15 45 37z"/>
+    <path d="M81 72c24-3 38-16 44-38-22 4-37 16-44 38z"/>
+    <path d="M80 88c-18-2-29-12-34-28 17 2 29 12 34 28z"/>
+
+  </g>
+</svg>

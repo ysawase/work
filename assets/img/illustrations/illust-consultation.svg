@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" role="img" aria-label="illust-consultation.svg">
+  <rect width="160" height="120" fill="none"/>
+
+  <g class="partial-fill">
+    <circle cx="46" cy="34" r="13" fill="#6f9b63" opacity="0.95"/>
+    <circle cx="112" cy="34" r="13" fill="#6f9b63" opacity="0.95"/>
+  </g>
+  <g fill="none" stroke="#3f442d" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round">
+
+    <circle cx="46" cy="34" r="13"/>
+    <path d="M32 78c3-20 25-20 29 0"/>
+    <circle cx="112" cy="34" r="13"/>
+    <path d="M98 78c3-20 25-20 29 0"/>
+    <path d="M55 86h50"/>
+    <path d="M67 70h26"/>
+    <path d="M72 78h16"/>
+
+  </g>
+</svg>
