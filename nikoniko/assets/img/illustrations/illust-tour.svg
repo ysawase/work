@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 120" role="img" aria-label="illust-tour.svg">
+  <rect width="160" height="120" fill="none"/>
+
+  <g class="partial-fill">
+    <path d="M35 88V44l45-28 45 28v44" fill="#6f9b63" opacity="0.95"/>
+    <path d="M54 88V58h52v30" fill="#f8fbf4" opacity="1"/>
+  </g>
+  <g fill="none" stroke="#3f442d" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round">
+
+    <path d="M35 88V44l45-28 45 28v44"/>
+    <path d="M54 88V58h52v30"/>
+    <path d="M70 88V68h20v20"/>
+    <path d="M40 98h80"/>
+    <circle cx="47" cy="30" r="5"/>
+    <circle cx="113" cy="30" r="5"/>
+
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+PORTFOLIO スクショ格納場所
+
+このフォルダへ、ポートフォリオ用スクショを配置してください。
+
+推奨：
+img/portfolio/nikoniko/
+
+推奨ファイル名：
+- top-pc.jpg
+- scenes-pc.jpg
+- flow-pc.jpg
+- top-sp.jpg
+
+現在の構成は：
+- portfolio側画像
+- nikoniko本体assets
+
+を分離する目的で整理しています。
