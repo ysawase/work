@@ -11051,3 +11051,107 @@ body:not(.portfolio-admin-page) .header-tel-hours{
   }
 }
 /* === /NIKONIKO HEADER TOPINFO 2026-05-11 === */
+
+
+/* =========================================================
+   NIKONIKO SP BOX OVERFLOW REPAIR 2026-05-11
+   対象：ニコニコはうす本体のSP表示のみ。
+   目的：
+   - 会社概要ページのアクセス白ボックスからテキストがはみ出す問題を修正
+   - 同様に白ボックス・カード内で長いテキストがはみ出す箇所を予防
+   変更しない：PC表示、ポートフォリオページ、文言、主要レイアウト。
+========================================================= */
+
+@media(max-width:760px){
+  /* SPではカード内の横幅計算を安定させる */
+  body:not(.portfolio-admin-page) .access-card,
+  body:not(.portfolio-admin-page) .access-card *,
+  body:not(.portfolio-admin-page) .contact-box,
+  body:not(.portfolio-admin-page) .contact-box *,
+  body:not(.portfolio-admin-page) .contact-panel,
+  body:not(.portfolio-admin-page) .contact-panel *,
+  body:not(.portfolio-admin-page) .message-box,
+  body:not(.portfolio-admin-page) .message-box *,
+  body:not(.portfolio-admin-page) .quiet-callout,
+  body:not(.portfolio-admin-page) .quiet-callout *,
+  body:not(.portfolio-admin-page) .faq-panel,
+  body:not(.portfolio-admin-page) .faq-panel *,
+  body:not(.portfolio-admin-page) .flow-panel,
+  body:not(.portfolio-admin-page) .flow-panel *,
+  body:not(.portfolio-admin-page) .profile-layout,
+  body:not(.portfolio-admin-page) .profile-layout *,
+  body:not(.portfolio-admin-page) .company-grid,
+  body:not(.portfolio-admin-page) .company-grid *{
+    box-sizing:border-box !important;
+    min-width:0 !important;
+    max-width:100% !important;
+  }
+
+  /* アクセス白ボックス：文章と地図が収まるように内側を安定 */
+  body:not(.portfolio-admin-page) .access-card{
+    width:100% !important;
+    overflow:hidden !important;
+    padding:18px !important;
+    grid-template-columns:1fr !important;
+    gap:16px !important;
+  }
+
+  body:not(.portfolio-admin-page) .access-text{
+    width:100% !important;
+    min-width:0 !important;
+  }
+
+  body:not(.portfolio-admin-page) .access-lead,
+  body:not(.portfolio-admin-page) .access-note{
+    max-width:100% !important;
+    width:100% !important;
+    white-space:normal !important;
+    word-break:normal !important;
+    overflow-wrap:break-word !important;
+    text-wrap:auto !important;
+  }
+
+  body:not(.portfolio-admin-page) .access-lead{
+    font-size:14.5px !important;
+    line-height:1.85 !important;
+  }
+
+  body:not(.portfolio-admin-page) .access-note{
+    font-size:12px !important;
+    line-height:1.75 !important;
+  }
+
+  /* 白ボックス系の長文・電話番号・メールアドレスもカード内に収める */
+  body:not(.portfolio-admin-page) .contact-item strong,
+  body:not(.portfolio-admin-page) .contact-item a,
+  body:not(.portfolio-admin-page) .info-list dd,
+  body:not(.portfolio-admin-page) .footer-info p,
+  body:not(.portfolio-admin-page) .footer-about p,
+  body:not(.portfolio-admin-page) .section-text,
+  body:not(.portfolio-admin-page) .section-lead,
+  body:not(.portfolio-admin-page) .faq-answer,
+  body:not(.portfolio-admin-page) .faq-item p{
+    max-width:100% !important;
+    white-space:normal !important;
+    word-break:normal !important;
+    overflow-wrap:break-word !important;
+  }
+
+  /* メールアドレスなど半角長文だけは必要時に折る */
+  body:not(.portfolio-admin-page) a[href^="mailto:"],
+  body:not(.portfolio-admin-page) .contact-item a[href^="mailto:"]{
+    overflow-wrap:anywhere !important;
+  }
+}
+
+@media(max-width:420px){
+  body:not(.portfolio-admin-page) .access-card{
+    padding:16px !important;
+  }
+
+  body:not(.portfolio-admin-page) .access-lead{
+    font-size:14px !important;
+    line-height:1.8 !important;
+  }
+}
+/* === /NIKONIKO SP BOX OVERFLOW REPAIR 2026-05-11 === */
